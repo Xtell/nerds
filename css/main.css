@@ -195,7 +195,9 @@ main section {
     list-style: none;
 }
 .slider-item {
-    display: none;
+    position: absolute;
+    transform: translateX(-1000px);
+    /* display: none; */
     padding-top: 75px;
 
 
@@ -233,7 +235,10 @@ main section {
     
 }
 .slider-item.current-slide {
-    display: block;
+    /* display: block; */
+    position: static;
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
 }
 .services {
     margin-top: -30px;
