@@ -537,5 +537,123 @@ main section {
     margin-bottom: 10px;
 }
 .modal-appeal {
-    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 760px;
+    top: 168px;
+    left: 50%;
+    margin-left: -480px;
+    padding: 65px 100px 85px 100px;
+    background-color: #ffffff;
+    z-index: 0;
+}
+.modal-appeal h2 {
+    margin: 0;
+    margin-bottom: 47px;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+}
+.appeal-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.appeal-form button {
+    border: none;
+}
+.appeal-item {
+    margin: 0;
+    margin-bottom: 30px;
+}
+.appeal-item label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+
+}
+.appeal-item input {
+    box-sizing: border-box;
+    width: 360px;
+    padding: 15px;
+    font-style: inherit;
+    font-weight: 400;
+    color: #000000;
+    border: 2px solid #d7dcde;
+}
+.appeal-item input:hover,
+.appeal-item textarea:hover {
+    border-color: #b4b9bb;
+
+}
+.appeal-item input:focus,
+.appeal-item textarea:focus {
+    outline: none;
+    border-color: #000000;
+    color: #000000;
+
+}
+.appeal-item input:invalid,
+.appeal-item textarea:invalid {
+    border-color: #e74246;
+    color: #e74246;
+}
+.appeal-item.textarea {
+    flex-grow: 1;
+    width: 100%;
+}
+.appeal-item textarea {
+    width: 100%;
+    height: 118px;
+    padding: 15px;
+    font-style: inherit;
+    color: #d7dcde;
+    font-weight: 400;
+    border: none;
+    border: 2px solid #d7dcde;
+    box-sizing: border-box;
+}
+
+.appeal-form .appeal-item:last-child {
+    margin-bottom: 45px;
+}
+.modal-close {
+    position: absolute;
+    top: 78px;
+    right: 90px;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-close::before,
+.modal-close::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 11px;
+    width: 25px;
+    height: 4px;
+    background-color: rgba(251, 86, 90, 0.3);
+}
+.modal-close:hover::before,
+.modal-close:hover::after {
+    background-color: rgba(251, 86, 90, 1);
+}
+.modal-close:focus::before,
+.modal-close:focus::after {
+    background-color: rgba(251, 86, 90, 0.1);
+}
+.modal-close::before {
+    transform: rotate(45deg);
+}
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+.modal-show {
+    opacity: 1;
+    z-index: 20;
+    transition: opacity 0.5s ease-in-out;
 }
