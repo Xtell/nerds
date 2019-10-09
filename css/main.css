@@ -236,6 +236,7 @@ main section {
     display: block;
 }
 .services {
+    margin-top: -30px;
     margin-bottom: 40px;
 }
 .services-list {
@@ -252,6 +253,7 @@ main section {
     display: flex;
     flex-direction: column;
     width: 300px;
+    margin-top: 30px;
     margin-right: 100px;
 }
 .services-item:nth-child(3n) {
@@ -393,7 +395,7 @@ main section {
     right: 0px;
     background-color: #eeeeee;
 }
-.partners-item:first-child {
+.partners-item:nth-child(4n+1) {
     padding-left: 0;
 }
 .partners-item:nth-child(4n) {
