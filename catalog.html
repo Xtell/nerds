@@ -33,8 +33,8 @@
         <section class="catalog-section">
             <div class="catalog-column-left">
                 <form action="" class="catalog-filter">
-                    <fieldset class="filter-item">
-                        <legend class="range-filter-legend">Стоимость:</legend>
+                    <fieldset class="filter-item filter-range">
+                        <legend>Стоимость:</legend>
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
@@ -53,16 +53,16 @@
                         <legend>Сетка:</legend>
                         <ul class="filter-option-list">
                             <li class="filter-option-item">
-                                <input type="radio" name="layout-button" id="filter-adaptive" disabled>
+                                <input class=" filter-input filter-input-radio visually-hidden" type="radio" name="layout-button" id="filter-adaptive" checked disabled >
                                 <label for="filter-adaptive">Адаптивная</label>
 
                             </li>
                             <li class="filter-option-item">
-                                <input type="radio" name="layout-button" id="filter-fixed">
+                                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="layout-button" id="filter-fixed">
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
-                            <li class="filter-option-item">
-                                <input type="radio" name="layout-button" id="filter-stretch">
+                            <li class=" filter-option-item">
+                                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="layout-button" id="filter-stretch">
                                 <label for="filter-stretch">Резиновая</label>
                             </li>
                         </ul>    
@@ -71,28 +71,28 @@
                         <legend>Особенности:</legend>
                         <ul class="filter-option-list">
                             <li class="filter-option-item">
-                                <input type="checkbox" name="filter-slider" id="filter-slider">
+                                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-slider" id="filter-slider">
                                 <label for="filter-slider">Слайдер</label>
                             </li>
                             <li class="filter-option-item">
-                                <input type="checkbox" name="filter-advantages" id="filter-advantages">
+                                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-advantages" id="filter-advantages">
                                 <label for="filter-advantages">Блок преимуществ</label>
                             </li>
                             <li class="filter-option-item">
-                                <input type="checkbox" name="filter-news" id="filter-news">
+                                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-news" id="filter-news">
                                 <label for="filter-news">Новости</label>
                             </li>
                             <li class="filter-option-item">
-                                <input type="checkbox" name="filter-gallery" id="filter-gallery">
+                                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-gallery" id="filter-gallery">
                                 <label for="filter-gallery">Галерея</label>
                             </li>
                             <li class="filter-option-item">
-                                <input type="checkbox" name="filter-card" id="filter-card">
+                                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-card" id="filter-card" disabled>
                                 <label for="filter-card">Корзина</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <button class="button" type="submit">Показать</button>
+                    <button class="button button-grey" type="submit">Показать</button>
                 </form>
             </div>
             <div class="catalog-column-right">
