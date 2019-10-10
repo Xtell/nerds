@@ -1,3 +1,11 @@
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 img {
     max-width: 100%;
 }
@@ -542,7 +550,6 @@ main section {
     margin-bottom: 10px;
 }
 .modal-appeal {
-    display: none;
     opacity: 0;
     position: fixed;
     width: 760px;
@@ -551,7 +558,10 @@ main section {
     margin-left: -480px;
     padding: 65px 100px 85px 100px;
     background-color: #ffffff;
-    z-index: 0;
+    -webkit-box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.72);
+    -moz-box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.72);
+    box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.72);
+    z-index: -1;
 }
 .modal-appeal h2 {
     margin: 0;
@@ -599,11 +609,7 @@ main section {
     color: #000000;
 
 }
-.appeal-item input:invalid,
-.appeal-item textarea:invalid {
-    border-color: #e74246;
-    color: #e74246;
-}
+
 .appeal-item.textarea {
     flex-grow: 1;
     width: 100%;
@@ -623,6 +629,12 @@ main section {
 .appeal-form .appeal-item:last-child {
     margin-bottom: 45px;
 }
+.appeal-item input:invalid,
+.appeal-item textarea:invalid,
+.appeal-item .input-invalid {
+    border-color: #e74246;
+    color: #e74246;
+}
 .modal-close {
     position: absolute;
     top: 78px;
@@ -633,6 +645,9 @@ main section {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+.modal-close:focus {
+    outline: none;
 }
 .modal-close::before,
 .modal-close::after {
@@ -650,6 +665,7 @@ main section {
 }
 .modal-close:focus::before,
 .modal-close:focus::after {
+
     background-color: rgba(251, 86, 90, 0.1);
 }
 .modal-close::before {
@@ -659,8 +675,32 @@ main section {
     transform: rotate(-45deg);
 }
 .modal-show {
-    display: block;
     opacity: 1;
-    z-index: 20;
-    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    transition: opacity 0.8s ease;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.overlay-show {
+    display: block;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+.inner-page .main-header {
+    padding-bottom: 110px;
+}
+.catalog-title {
+    margin: 0;
+    margin-top: 76px;
+    font-size: 55px;
+    line-height: 55px;
+    text-align: center;
 }
