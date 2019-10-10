@@ -34,7 +34,7 @@
             <div class="catalog-column-left">
                 <form action="" class="catalog-filter">
                     <fieldset class="filter-item">
-                        <legend>Стоимость</legend>
+                        <legend class="range-filter-legend">Стоимость:</legend>
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
@@ -43,25 +43,25 @@
                                 <div class="toggle toggle-min"></div>
                                 <div class="toggle toggle-max"></div>
                             </div>
-                        </div>
-                        <div class="price-controls">
-                            <label>ОТ:<input type="text"  name="price-min"></label>
-                            <label>ДО:<input type="text"  name="price-max"></label>
+                            <div class="price-controls">
+                                <label class="min-price">ОТ<input type="text"  name="price-min" value="0"></label>
+                                <label class="max-price">ДО<input type="text"  name="price-max" value="15000"></label>
+                            </div>
                         </div>
                     </fieldset>
                     <fieldset class="filter-item">
                         <legend>Сетка:</legend>
                         <ul class="filter-option-list">
-                            <li>
-                                <input type="radio" name="layout-button" id="filter-adaptive">
+                            <li class="filter-option-item">
+                                <input type="radio" name="layout-button" id="filter-adaptive" disabled>
                                 <label for="filter-adaptive">Адаптивная</label>
 
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="radio" name="layout-button" id="filter-fixed">
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="radio" name="layout-button" id="filter-stretch">
                                 <label for="filter-stretch">Резиновая</label>
                             </li>
@@ -70,23 +70,23 @@
                     <fieldset class="filter-item">
                         <legend>Особенности:</legend>
                         <ul class="filter-option-list">
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="checkbox" name="filter-slider" id="filter-slider">
                                 <label for="filter-slider">Слайдер</label>
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="checkbox" name="filter-advantages" id="filter-advantages">
                                 <label for="filter-advantages">Блок преимуществ</label>
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="checkbox" name="filter-news" id="filter-news">
                                 <label for="filter-news">Новости</label>
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="checkbox" name="filter-gallery" id="filter-gallery">
                                 <label for="filter-gallery">Галерея</label>
                             </li>
-                            <li>
+                            <li class="filter-option-item">
                                 <input type="checkbox" name="filter-card" id="filter-card">
                                 <label for="filter-card">Корзина</label>
                             </li>
