@@ -895,3 +895,40 @@ input[type=radio].visually-hidden {
     width: 27px;
     background-image: url("../img/checkbox-on.svg");
 }
+.catalog-sort-wrapper {
+    display: flex;
+    align-items: center;
+}
+.catalog-sort-wrapper b {
+}
+.catalog-sort-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+    margin-right: 25px;
+}
+.catalog-sort-list li {
+    margin-right: 25px;
+}
+.catalog-sort-list a {
+    color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.3;
+}
+.catalog-sort-list a:hover {
+    opacity: 0.6;
+}
+.catalog-sort-item-selected a,
+.catalog-sort-list a:focus{
+    opacity: 1;
+}
+
+.catalog-sort-wrapper p {
+ margin: 0;
+}
